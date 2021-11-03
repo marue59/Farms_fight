@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+{%  block content %}
+    <div class="container">
+        {% if winner == troupAtk.user_name %}
+            <div class="card_winner">
+                <p class="winner">Bravo {{ winner }} , tu as gagné !</p>
+            </div>
+        {% else  %}
+            <div class="card_winnerdef">
+                <p class="winner">Dommage, {{ winner }} a gagné.</p>
+            </div>
+        {% endif %}
+        <div class="card">
+            {% if lostQuantityAtk <= 0 %}
+                <p class="troup">Tu as perdu {{ lostQuantityAtk }} {{ troupAtk['species'] }}(s) !</p>
+                {% if winner == troupAtk.user_name %}
+                    {% if quantityGold == 0 %}
+                        <p class="troup">Tu n'as pas gagné d'or !</p>
+                        {% else %}
+                    <p class="troup">Tu as gagné {{ quantityGold }} d'or !</p>
+                        {% endif %}
+                {% endif %}
+            {% else %}
+                <p class="troup">Tu as perdu {{ lostQuantityAtk }} {{ troupAtk['species'] }}(s). </p>
+                {% if winner == troupAtk.user_name %}
+                    <p class="troup">Tu as gagné {{ quantityGold }} d'or !</p>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="card resultDef">
+            <ul>
+                <li><p class="troup">{{ troupDef.user_name }} a perdu </p></li>
+                <li><p class="troup">{{ lostQuantityDef }}</li>
+                <li> {% if troupDef.species == 'poule' %}
+                        <img class= "img_small"  src="/assets/images/chicken.png" alt="{{ troupDef.species }}">
+                    {% elseif troupDef.species == 'cochon'%}
+                        <img class= "img_small" src="/assets/images/pig.png" alt="{{ troupDef.species }}">
+                    {% elseif troupDef.species == 'chèvre'%}
+                        <img class= "img_small" src="/assets/images/goat.png" alt="{{ troupDef.species }}">
+                    {% elseif troupDef.species == 'vache' %}
+                        <img class= "img_small" src="/assets/images/cow.png" alt="{{ troupDef.species  }}">
+                    {% endif %}</li>
+                <li><p class="troup">sur les {{ troupAtk['quantity'] }} engagé(es).</p></li>
+            </ul>
+        </div>
+    </div>
+{%  endblock %}

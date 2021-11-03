@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Animals {{ animals.animals_id }}</h1>
+    {% if animals.is_alive == 1 %}
+     votre animal est vivant !!!!!
+        {% else %}
+        IL EST MORT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    {% endif %}
+    <a href="/animals/edit/{{ animals.id }}">Edit</a>
+    <a href="/animals/delete/{{ animals.id }}">Supprimer</a>
+    <a href="/animals/index">Back</a>
+{% endblock %}

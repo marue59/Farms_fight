@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Ressource de type {{ resources.quantity }}</h1>
+    <p>Cette ressource concerne l'utilisateur {{ resources.user_id }}</p>
+    <p>Niveau actuel : {{ resources.quantity }}</p>
+    <a href="/resources/edit/{{ resources.id }}">Edit</a>
+    <a href="/resources/delete/{{resources.id}}">Supprimer</a>
+    <a href="/resources/index">Back</a>
+{% endblock %}

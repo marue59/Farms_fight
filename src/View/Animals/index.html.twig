@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+{% block subtitle %}
+    <h1 class="title_page">Inventaire de {{ session.user_name}}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    {% for animal in animals %}
+        <div class="card">
+            <div class="title_item">
+                {% if animal.species == 'poule' %}
+                    <img src="/assets/images/chicken.png" alt="{{ animal.species }}">
+                {% elseif animal.species == 'cochon'%}
+                    <img src="/assets/images/pig.png" alt="{{ animal.species }}">
+                {% elseif animal.species == 'chèvre'%}
+                    <img src="/assets/images/goat.png" alt="{{ animal.species }}">
+                {% elseif animal.species == 'vache' %}
+                    <img src="/assets/images/cow.png" alt="{{ animal.species }}">
+                {% endif %}
+                <h3>Nombre: {{ animal.quantity }}</h3>
+                <a href="../edit/{{ animal.id }}"><img src="/assets/images/plus_sign.png" alt="plus_sign"></a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

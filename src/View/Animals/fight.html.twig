@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+     <div class="container">
+        <div class="card">
+        {% if troupAtk.species == 'poule' %}
+            <img class= "img_troup"  src="/assets/images/chicken.png" alt="{{ troupAtk.species }}">
+        {% elseif troupAtk.species == 'cochon'%}
+            <img class= "img_troup" src="/assets/images/pig.png" alt="{{ troupAtk.species }}">
+        {% elseif troupAtk.species == 'chèvre'%}
+            <img class= "img_troup" src="/assets/images/goat.png" alt="{{ troupAtk.species }}">
+        {% elseif troupAtk.species == 'vache' %}
+            <img class= "img_troup" src="/assets/images/cow.png" alt="{{ troupAtk.species  }}">
+        {% endif %}
+        <p class="troup"> {{ troupAtk.quantity }}</p>
+        </div>
+         <div class="card">
+        <p class="troup">Tu attaques la ferme de {{ troupDef.user_name }} </p>
+         </div>
+         <div class="card cardFight">
+        <p class="troupFight"><a href="http://localhost:8000/animals/fight/{{ session.user_id }}/?result=true">
+                FIGHT !</a></p>
+        </div>
+    </div>
+{% endblock %}

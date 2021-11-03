@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+{% block ress_bar %} <link rel="stylesheet" href="/assets/css/form.css">{% endblock %}
+{% block content %}
+<div class="imglogofarmer">
+    {% if session is empty %}
+    <a href="/user/connect/">
+        {% else %}
+        <a href="/Home/index/">
+            {% endif %}
+            <div class="logoferme"><img class="logofarmer" src="/assets/images/farms-fight.png" href="farms-fight"></div>
+            <p class="textplay">PLAY</p>
+        </a>
+        {% block subtitle %}
+        {% if session is empty %}
+        <a href="/user/connect/">
+            {% else %}
+            <a href="/Home/index/">
+                {% endif %}
+            </a>
+            {% endblock %}
+            {% endblock %}
+{% block item %}{% endblock %}

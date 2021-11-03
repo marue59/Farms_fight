@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Ressources</h1>
+    <ul>
+        {% for resource in resourcesR %}
+            <li><a href="/resources/show/{{ resource.id }}">{{ resource.id }}.
+                    ressource de type {{ resource.resource_id }} appartenant à l'user {{ resource.user_id }}</a></li>
+        {% else %}
+            <li>Aucune ressource possédée</li>
+        {% endfor %}
+    </ul>
+    <a href="/resources/add">Ajouter</a>
+{% endblock %}

@@ -1,0 +1,327 @@
+* body {
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: url("https://image.noelshack.com/fichiers/2019/43/3/1571821467-fond-farm-wars.png");
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom right;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+}
+
+@media screen AND (min-width: 100px) {
+
+
+    /*---------------------- NAV BAR ----------------------*/
+    .nav_bar_content {
+        position: relative;
+        width: 100%;
+    }
+
+    .plank {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    ul.list-ress {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        list-style: none;
+        width: 95%;
+        height: 14vh;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .ress p {
+        margin: 0;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .ress {
+        width: 100px;
+        padding:2vh ;
+    }
+
+    .ress img {
+        margin: 0 auto;
+        display: block;
+        max-height: 7vh;
+        max-width: 7vh;
+    }
+
+    .ble {
+        width: 70%;
+        top: 1%;
+    }
+
+    .water {
+        width: 45%;
+        top: 1%;
+    }
+
+    .gold {
+        margin-left: 1px;
+        width: 60%;
+        top: 1%;
+    }
+
+    .title_page {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.47);
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    /*---------------------- CONTENT ----------------------*/
+    .container {
+        width: 95%;
+        margin: auto;
+        min-height: 57%;
+    }
+
+    .card {
+        background: linear-gradient(chocolate, darksalmon);
+        width: 90%;
+        margin: 3vh auto auto;
+        border-radius: 20px;
+        padding: 1vh;
+        border:4px ridge #e18d58;
+    }
+
+    .card ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding:0;
+    }
+
+    .card ul li {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    .title_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .title_item img {
+        height: 7vh;
+        padding: 0.2rem;
+    }
+
+    .title_item h2 {
+        align-self: center;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    p.prod {
+        align-self: center;
+        font-size: 1.5rem;
+    }
+
+    .img_troup {
+        height: 12vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img_small {
+        height: 6vh;
+        display: block;
+        mardin-top: 1rem;
+    }
+
+    .troup {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .troup_defenser {
+        text-align: center;
+        font-size: 1.3rem ;
+    }
+
+    .cardFight {
+        width: 110px;
+        height: 47px;
+        background: linear-gradient(saddlebrown, sandybrown);
+        border:2px solid saddlebrown;
+        align-self: center;
+    }
+
+    .troupFight {
+        text-align: center;
+    }
+
+    .troupFight a {
+        text-decoration: none;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    a:visited {
+        color:black;
+    }
+
+
+    .card_winner {
+        background: linear-gradient(#95d262, #287b03);
+        width: 90%;
+        margin: 3vh auto auto;
+        border-radius: 20px;
+        padding: 1vh;
+        border:4px ridge #e18d58;
+    }
+
+    .card_winnerdef {
+        background: linear-gradient(#ed4843, #7b0a11);
+        width: 90%;
+        margin: 3vh auto auto;
+        border-radius: 20px;
+        padding: 1vh;
+        border:4px ridge #e18d58;
+    }
+
+    .winner{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    /*---------------------- ITEM BOTTOM ----------------------*/
+
+    .menu_bottom {
+        width: 100%;
+        bottom: 0;
+    }
+
+    .list_item {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        margin: auto;
+
+    }
+
+
+    .list_item li {
+        list-style: none;
+        background-color: rgba(217, 217, 232, 0.8);
+        border: 2px ridge #e18d58;
+        border-radius: 25%;
+    }
+
+    .item img {
+        height: 80px;
+    }
+
+    .logout-button {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/*_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*---------------------- SCREEN OVER 768px -------------------------*/
+
+@media screen AND (min-width: 768px) {  /*---------------------- NAV BAR ----------------------*/
+    .plank {
+        min-height: 10vh;
+        max-height: 110px ;
+    }
+
+    ul.list-ress {
+        max-width: 700px;
+    }
+
+    .ress {
+        display: flex;
+        flex-direction: column;
+        align-self: baseline;
+        align-items: center;
+    }
+    .card {
+        max-width:700px;
+    }
+    .card_winner {
+        max-width:700px;
+    }
+
+    .card_winnerdef {
+        max-width:700px;
+    }
+
+    .img_small {
+        height: 8vh;
+        display: block;
+        mardin-top: 1rem;
+    }
+
+    .troup {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .troup_defenser {
+        text-align: center;
+        font-size: 1.5rem ;
+    }
+
+    .recrut {
+        background: linear-gradient(darksalmon, chocolate);
+        border-radius: 10%;
+        border: solid 1px black;
+        height: auto;
+        width: 13vh;
+        text-align: center;
+        align-self: auto;
+        padding: 5px;
+        }
+
+    .recruit_animals {
+        text-decoration: none;
+        }
+
+
+        /*---------------------- ITEM BOTTOM ----------------------*/
+        .list_item {
+            display: flex;
+            justify-content: space-around;
+            max-width: 700px;
+        }
+
+        .list_item li {
+            list-style: none;
+        }
+
+    .logout-button {
+        bottom: 20px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    }

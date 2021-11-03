@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/assets/css/form.css">
+<form class="signin" method="post">
+    <input class="sign" type="email" value="{{ user.email }}" name="email" placeholder="Entre un mail valide">
+    <input class="sign" type="password" value="{{ user.password }}" name="password" placeholder="Entre ton mot de passe">
+    <input class="sign" type="password" value="{{ user.password }}" name="password" placeholder="Répéte ton mot de passe">
+    <input class="sign" type="text" value="{{ user.user_name }}" name="user_name" placeholder="Choisis un pseudo">
+    <input class="sign" type="hidden" value="1" name="farm">
+    <input class="sign" type="hidden" value="1" name="current_level">
+    <input class="playsign" type="submit" value="Jouer !">
+</form>
+<p class="text-connect">Déjà inscrit(e) ?<br><a href="/user/connect/">Connecte-toi !</a></p>

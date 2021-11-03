@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Farms Fight{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block stylesheet %}{% endblock %}
+    <link rel="icon" href="/assets/images/favicon.png">
+</head>
+
+<body>
+
+{% block ress_bar %}
+    <div class="bar_content">
+        <nav class="nav_bar_content">
+            <img class="plank" src="/assets/images/planche.png" alt="">
+            <ul class="list-ress">
+                <li class="ress ressWater"><img class="water"
+                    src="/assets/images/PinClipart.com_waterdrop-clip-art_782090.png" alt="">
+                    <p>{{ waterQuantity }}</p></li>
+                <li class="ress"><img class="ble" src="/assets/images/ble.png" alt=""><p>{{ cerealQuantity }}</p></li>
+                <li class="ress"><img class="gold" src="/assets/images/piece_or.png"
+                                      alt=""><p>{{ goldQuantity }}</p></li>
+            </ul>
+        </nav>
+
+        {% block subtitle %}<h1 class="title_page">La ferme de {{ session.user_name }}</h1>{% endblock %}
+
+    </div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block item %}
+    <div class="menu_bottom">
+        <ul class="list_item">
+            <a href="/animals/index/{{ session.user_id }}"><li class="item">
+                    <img src="/assets/images/avatar.jpg" alt="">   </li></a>
+            <a href="/animals/fight/{{ session.user_id }}"><li class="item">
+                    <img src="/assets/images/fourche-croisee.png" alt="">  </li></a>
+            <li class="item"><img src="/assets/images/enveloppe.png" alt="">   </li>
+        </ul>
+    </div>
+{% if session is empty %}
+    {% else %}
+        <a href="/user/logout/"><img class="logout-button" src="/assets/images/logout.png" alt="Déconnexion"></a>
+        {% endif %}
+{% endblock %}
+
+{% block javascript %}{% endblock %}
+</body>
+</html>
+
+

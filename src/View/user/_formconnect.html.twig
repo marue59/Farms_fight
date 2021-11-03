@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/assets/css/form.css">
+<form class="signin" method="post">
+    <input class="sign" type="email" value="{{ user.email }}" name="email" placeholder="Entre ton mail">
+    <input class="sign" type="password" value="{{ user.password }}" name="password"
+           placeholder="{% if mdp %}Erreur de mot de passe !{% else %}Entre ton mot de passe{% endif %}">
+
+    <input class="playsign" type="submit" value="Jouer !">
+</form>
+<p class="text-connect">Pas encore fermier ?<br><a href="/user/add/">Crée ta ferme !</a></p>
